@@ -13,7 +13,14 @@ console.log(sumWithReduce([])); // 0
 */
 
 let sumWithReduce = function(nums) {
-  // Your code here 
+
+  //store reduce method in variable
+  let sums = nums.reduce(function (acc, ele) {
+
+    return acc + ele;
+  }, 0);
+
+  return sums;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
