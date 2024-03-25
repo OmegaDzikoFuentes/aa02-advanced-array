@@ -12,7 +12,21 @@ console.log(sumForEach([])); // 0
 */
 
 let sumForEach = function(arr) {
-  // Your code here 
+
+ //create sum
+ let sum = 0;
+
+ //loop with for each
+ arr.forEach(function (ele) {
+
+ //add element to sum
+ sum += ele;
+
+ })
+
+ //return sum
+ return sum;
+
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
