@@ -14,7 +14,32 @@ console.log(avgVal([])); // null
 */
 
 let avgVal = function(arr) {
-    // Your code here 
+
+  //ask if the arr length is 0
+  if(arr.length === 0) {
+
+  //if yes return null
+  return null;
+
+  }
+
+  //create sum
+  let sum = 0;
+
+  //loop through array with forEach
+  arr.forEach(function (ele) {
+
+  //add all ele to sum
+  sum += ele;
+
+  });
+
+  //store val of divide sum by arr length in variable
+  let avg = sum / arr.length;
+
+  //return avg variable
+  return avg;
+
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
