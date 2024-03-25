@@ -13,7 +13,25 @@ console.log(removeEWords('Enter the building')); // 'building'
 */
 
 let removeEWords = function(sentence) {
-    // Your code here 
+
+  //turn string into array
+  let sentArr = sentence.split(" ");
+  //create a variable to store the filtered loop
+  let minusE = sentArr.filter(function (word) {
+
+  //ask if the word lowercased is without an e
+  if(!word.toLowerCase().includes('e')) {
+
+  //if yes, add to array
+  return word;
+
+  }
+
+});
+
+  //return filtered array
+  return minusE.join(" ");
+
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
