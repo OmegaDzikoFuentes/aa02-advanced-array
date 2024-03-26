@@ -17,10 +17,42 @@ console.log(hasThreeVowels('go home'));         //  false
 */
 
 let hasThreeVowels = function(string) {
-    // Your code here 
+
+    //change string into array
+    let strArr = string.split('');
+
+    //create vowels str
+    let vowels = 'aeiou';
+
+    //create an empty str variable
+    let empty = '';
+
+    //create a vsriable for the filter method
+    let foundVowels = strArr.filter((char) => {
+
+    //ask if the curr char is part of the vowels str and is missing from the str
+    if(vowels.includes(char) && !empty.includes(char)) {
+
+    //if yes then add the char to the str
+    return empty += char;
+
+    };
+
+});
+
+    //ask if str count greater or equal to three
+    if(empty.length >= 3) {
+
+    //if yes return true
+    return true;
+
+    };
+
+    //otherwise false
+    return false;
 };
 
-// Your code here 
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
