@@ -17,12 +17,53 @@ console.log(choosePrimes([5, 6, 4, 11, 2017])); // [ 5, 11, 2017 ]
 
 */
 
+//write helper function to decide whether number is prime or not
+
 let isPrime = function(num) {
-    // Your code here 
+
+    //ask if number is less than 2
+    if(num < 2) {
+
+    //if yes return false
+    return false;
+
+    }
+    //loop from 2 to the num
+    for (let i = 2; i < num; i++) {
+
+    //ask if num divided by i is without remainder
+    if(num % i === 0) {
+
+    //if yes return false
+    return false;
+
+    }
+
+}
+
+    //otherwise return true
+    return true;
 }
 
 let choosePrimes = function(nums) {
-    // Your code here 
+
+    //create empty array
+    let primes = [];
+
+    //use filter method to loop through array
+    let filtered = nums.filter((num) => {
+
+    //ask if prime by passing helper func
+    if(isPrime(num)) {
+
+    //if yes push to array
+    primes.push(num);
+
+    }
+});
+
+    //return array
+    return primes;
 }
 
 // alternative solution using Array.filter
