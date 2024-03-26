@@ -11,7 +11,21 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 */
 
 let unique = function(array) {
-    // Your code here 
+
+    //create empty array
+    let single = [];
+
+    //store filter method in array
+    let filtered = array.filter((ele) => {
+
+        if(!single.includes(ele)) {
+
+            single.push(ele);
+        }
+    });
+
+    return single;
+
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
