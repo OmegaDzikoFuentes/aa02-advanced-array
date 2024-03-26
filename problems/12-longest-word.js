@@ -16,10 +16,32 @@ console.log(longestWord('')); // ''
 */
 
 let longestWord = function(sentence) {
-    // Your code here 
+
+    //change string into array
+    let sentArr = sentence.split(' ');
+
+    //create an empty string
+    let longest = '';
+
+    //create variable to store foreach method
+    sentArr.forEach((word) => {
+
+    //ask if word is longer than created string
+    if(word.length > longest.length) {
+
+    //if yes reasssign word to empty string
+    longest = word;
+
+    }
+
+});
+
+    //return str
+    return longest;
+
 };
 
-// Your code here 
+// Your code here
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
