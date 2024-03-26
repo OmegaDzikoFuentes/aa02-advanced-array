@@ -16,7 +16,26 @@ console.log(snakeToCamel('APp_ACADEMY_iS_cOol')); // 'AppAcademyIsCool'
 */
 
 function snakeToCamel(str) {
-    // Your code here 
+
+    //change string to array and remove the underscore
+    let strArr = str.split('_');
+
+    //store map method in variable
+    let mapped = strArr.map( (ele) => {
+
+    //for each word change the first char to capital
+    let cap = ele.slice(0, 1).toUpperCase();
+
+    //use slice to capitalize first char and concat rest of word
+    let capWord = cap + ele.slice(1).toLowerCase();
+
+    return capWord;
+
+    });
+
+    //return mapped word
+    return mapped.join('');
+
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

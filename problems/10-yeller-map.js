@@ -13,7 +13,18 @@ console.log(yeller(['kiwi', 'orange', 'mango'])); // [ 'KIWI!', 'ORANGE!', 'MANG
 */
 
 let yeller = function(words) {
-  // Your code here 
+
+  //store map method in variable
+  let mapped = words.map((word) => {
+
+  //take element and captilize
+  return word.toUpperCase() + "!";
+
+  });
+
+  //return map variable
+  return mapped;
+
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
