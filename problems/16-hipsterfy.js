@@ -14,11 +14,48 @@ console.log(hipsterfy('panthers are great animals')); // 'panthrs ar gret animls
 */
 
 let removeLastVowel = function(word) {
-    // Your code here 
+
+    //change str into array
+    let wordArr = word.split('');
+
+    //create vowels str
+    let vowels = 'aAeEiIoOuU';
+
+    //loop in reverse
+    for (let i = wordArr.length - 1; i >= 0; i--) {
+
+        //store value in variable
+        let val = wordArr[i];
+
+    //ask if curr char is in vowels array
+    if(vowels.includes(val)) {
+
+    //if yes remove
+    wordArr.splice(i, 1);
+
+    break;
+    }
+
+}
+
+    //return array turned into string
+    return wordArr.join('');
 };
 
 let hipsterfy = function(sentence) {
-    // Your code here 
+
+    //change sent into array
+    let sentArr = sentence.split(" ");
+
+    //use map method and implement remve helper function
+    let changed = sentArr.map((word) => {
+
+        return removeLastVowel(word);
+
+    });
+
+    return changed.join(' ');
+
 };
 
 // alternative solution using Array.map
